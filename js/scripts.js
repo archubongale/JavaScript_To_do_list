@@ -15,6 +15,10 @@ $(document).ready(function() {
       $("#show-task").show();
       $(".task-name").text(newTask.taskName);
       $(".description").text(newTask.description);
+      $("#show-completed").show();
+      $(".task-completed").append("<li>" + newTask.taskName + "</li>");
+      newTask.done = true;
+      $(this).parent().remove();
     });
   });
 });
